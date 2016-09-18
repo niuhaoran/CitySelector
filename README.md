@@ -14,14 +14,12 @@
        
 3.实现代理方法:
 <pre><code>
-	 - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city 
-  area:(NSString *)area provinceId:(NSString *)provinceId cityId:(NSString *)cityId areaId:(NSString *)areaId
-{
+- (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city 
+  area:(NSString *)area provinceId:(NSString *)provinceId cityId:(NSString *)cityId areaId:(NSString *)areaId{
 
     //在此读取需要的城市名称和codeID
     
 }
-
 </code></pre>
  
 ##改写自如下开源库(增加了读取城市Id的功能)
