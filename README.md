@@ -1,6 +1,8 @@
 # CitySelector-(三级城市选择器-加强版)
-使用方法:
+
+##使用方法:
 1.将文件夹拖入项目
+
 2.导入头文件 STPickerArea.h, 按照如下方式初始化,设置代理遵守协议<STPickerAreaDelegate>
 
      eg:
@@ -13,10 +15,11 @@
 
   - (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province city:(NSString *)city 
   area:(NSString *)area provinceId:(NSString *)provinceId cityId:(NSString *)cityId areaId:(NSString *)areaId {
+
     //在此读取需要的城市名称和codeID
 }
 
-
+###
 改编自如下开源库(增加了读取城市Id的功能)
 //  Created by https://github.com/STShenZhaoliang/STPickerView on 16/2/15.
 //  Copyright © 2016年 shentian. All rights reserved.
