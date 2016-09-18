@@ -19,7 +19,9 @@ city:(NSString *)city area:(NSString *)area provinceId:(NSString *)provinceId
 cityId:(NSString *)cityId areaId:(NSString *)areaId {
 
     //在此读取需要的城市名称和codeID
-    
+    NSString *text = [NSString stringWithFormat:@"%@ %@ %@", province, city, area];
+    NSString *text2 = [NSString stringWithFormat:@"%@ %@ %@", provinceId, cityId, areaId];
+    NSLog(@"text,text2: %@,%@",text,text2);
 }
 </code></pre>
  
