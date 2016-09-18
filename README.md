@@ -3,7 +3,7 @@
 ##使用方法:
 1.将文件夹拖入项目
 
-2.导入头文件 STPickerArea.h, 按照如下方式初始化,设置代理遵守协议<STPickerAreaDelegate>
+2.导入头文件 STPickerArea.h, 按照如下方式初始化,设置代理遵守协议STPickerAreaDelegate
 
      eg:
         STPickerArea *pickerArea = [[STPickerArea alloc]init];
