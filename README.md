@@ -25,7 +25,6 @@ cityId:(NSString *)cityId areaId:(NSString *)areaId {
  
 ![Alt text](/img.png)
 
-![Alt text](/img.png "Optional title")
 ###改写自如下开源库(增加了读取城市Id的功能)
 
 //  Created by https://github.com/STShenZhaoliang/STPickerView on 16/2/15.
