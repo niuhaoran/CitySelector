@@ -80,7 +80,9 @@
     self.province = self.arrayProvince[0];
     self.city = self.arrayCity[0];
     self.area = self.arrayArea[0];
-    
+    self.arrayProvinceId = self.arrayProvinceId[0];
+    self.cityId = self.arrayCityId[0];
+    self.areaId = self.arrayAreaId[0];
     // 2.设置视图的默认属性
     _heightPickerComponent = 32;
     [self setTitle:@"请选择城市地区"];
