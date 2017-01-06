@@ -2,29 +2,14 @@
 
 ##使用方法:(联系我:qq->1648305422--)
 1.将文件夹拖入项目
-
-2.导入头文件 STPickerArea.h, 按照如下方式初始化,设置代理遵守协议STPickerAreaDelegate
+<div></div>
+2.导入头文件 STPickerArea.h
 <pre><code>
-     eg:
-        STPickerArea *pickerArea = [[STPickerArea alloc]init];
-        [pickerArea setDelegate:self]; //设置代理
-        [pickerArea setContentMode:STPickerContentModeCenter]; //选择器出现在屏幕的位置
-        [pickerArea show];
+     //eg:
+       [STPickerArea shareWithMode:STPickerContentModeBottom].block = ^(NSString *province ,NSString *city, NSString *area, NSString *provinceId ,NSString *cityId ,NSString *areaId){ // eg:在此读取需要的城市名称和codeID      NSLog(@"province:%@,city:%@,area:%@",province,city,area); 
+       };
 </code></pre>
        
-3.实现代理方法:
-<pre><code>
-	- (void)pickerArea:(STPickerArea *)pickerArea province:(NSString *)province 
-	city:(NSString *)city area:(NSString *)area provinceId:(NSString *)provinceId 
-	cityId:(NSString *)cityId areaId:(NSString *)areaId {
-
-	    //在此读取需要的城市名称和codeID
-	    NSString *text = [NSString stringWithFormat:@"%@ %@ %@", province, city, area];
-	    NSString *text2 = [NSString stringWithFormat:@"%@ %@ %@", provinceId, cityId, areaId];
-	    NSLog(@"text,text2: %@,%@",text,text2);
-	}
-</code></pre>
- 
 ![Alt text](/img.png)
 
 ###改写自如下开源库(增加了读取城市Id的功能)
