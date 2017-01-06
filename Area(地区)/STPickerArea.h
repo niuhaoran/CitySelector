@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "STPickerView.h"
 NS_ASSUME_NONNULL_BEGIN
+
+
+typedef void(^passValueBlock)(NSString *province ,NSString *city, NSString *area, NSString *provinceId ,NSString *cityId ,NSString *areaId);
+
 @class STPickerArea;
 @protocol  STPickerAreaDelegate<NSObject>
 
@@ -20,5 +24,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign)CGFloat heightPickerComponent;
 
 @property(nonatomic, weak)id <STPickerAreaDelegate>delegate ;
+@property(nonatomic, copy) passValueBlock block;
++(instancetype)shareWithMode:(STPickerContentMode)mode;//初始化方法
+
 @end
 NS_ASSUME_NONNULL_END

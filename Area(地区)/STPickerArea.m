@@ -46,6 +46,16 @@
 @implementation STPickerArea
 
 #pragma mark - --- init 视图初始化 ---
+static STPickerArea *cat;
++(instancetype)shareWithMode:(STPickerContentMode)mode {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        cat = [[STPickerArea alloc]init];
+        [cat setContentMode:mode]; //选择器出现在屏幕的位置
+        [cat show];
+    });
+    return cat;
+}
 
 - (void)setupUI
 {
@@ -80,9 +90,11 @@
     self.province = self.arrayProvince[0];
     self.city = self.arrayCity[0];
     self.area = self.arrayArea[0];
-    self.arrayProvinceId = self.arrayProvinceId[0];
+    
+    self.provinceId = self.arrayProvinceId[0];
     self.cityId = self.arrayCityId[0];
     self.areaId = self.arrayAreaId[0];
+
     // 2.设置视图的默认属性
     _heightPickerComponent = 32;
     [self setTitle:@"请选择城市地区"];
@@ -187,6 +199,9 @@
 - (void)selectedOk
 {
     [self.delegate pickerArea:self province:self.province city:self.city area:self.area provinceId:self.provinceId cityId:self.cityId areaId:self.areaId];
+    if (self.block) {
+        self.block(self.province,self.city,self.area,self.provinceId,self.cityId,self.areaId);
+    }
     [super selectedOk];
 }
 
