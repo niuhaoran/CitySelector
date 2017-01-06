@@ -1,6 +1,6 @@
 # CitySelector-(三级城市选择器-加强版)
 
-##使用方法:
+##使用方法:(联系我:qq->1648305422)
 1.将文件夹拖入项目
 
 2.导入头文件 STPickerArea.h, 按照如下方式初始化,设置代理遵守协议STPickerAreaDelegate
